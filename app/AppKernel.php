@@ -1,13 +1,13 @@
 <?php
 
-use CustomKernel;
+use Kernel\Base as BaseKernel;
 
 /**
  * Kernel App
  *
  * @author Ramón Serrano <ramon.calle.88@gmail.com>
  */
-class AppKernel extends CustomKernel
+class AppKernel extends BaseKernel
 {
     
     public function registerBundles()
@@ -15,10 +15,10 @@ class AppKernel extends CustomKernel
         // Neccessari
         $bundles = parent::registerBundles();
         
-        //$bundles[] = new Bundle();
+        // Register prod bundles
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
-            //$bundles[] = new Bundle();
+            // Register dev bundles
         }
 
         return $bundles;
