@@ -2,4 +2,5 @@ app/bootstrap.php.cache
 composer.lock
 vendor
 var
+web/bundles
 .idea
